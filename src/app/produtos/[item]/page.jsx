@@ -10,8 +10,12 @@ export default async function page({ params }) {
     )[0];
     console.log(produto);
     return (
-        <>
-            
-        </>
+         <div className="flex flex-col h-100 justify-center items-center text-center">
+                <Card
+                    titulo={produto.nome}
+                    imagem={produto.imagem}
+                    descricao={produto.descricao}
+                />
+            </div>  
     );
 }
