@@ -1,14 +1,17 @@
-export default function Card() {
+import Image from 'next/image'
 
-    const Card = ({ titulo, imagem, descricao }) => {
+export default function Card({ titulo, imagem, descricao }) {
         return (
 
-          <div className="card">
-            <img src={imagem} alt={titulo} />
-            <h3>{titulo}</h3>
+          <div>
+            <h1>{titulo}</h1>
+            <Image 
+            src={imagem} 
+            width={300}
+            height={300}
+            alt={titulo} />
             <p>{descricao}</p>
           </div>
           
         );
-      };
 }
