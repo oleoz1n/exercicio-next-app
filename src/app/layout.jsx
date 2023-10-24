@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Cabecalho from '../components/Cabecalho/Cabecalho'
+import Rodape from '../components/Rodape/Rodape'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="h-screen grid grid-rows-[1fr,10fr,1fr]">
+        <Cabecalho/>
+        {children}
+      <Rodape/>
+      </div>
+      </body>
     </html>
   )
 }
